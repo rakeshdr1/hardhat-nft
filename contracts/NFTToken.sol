@@ -19,6 +19,7 @@ contract NFTToken is ERC721 {
         artist = _artist;
         txFeeToken = _txFeeToken;
         txFeeAmount = _txFeeAmount;
+        excludedList[_artist] = true;
         _mint(_artist, 0);
     }
 
