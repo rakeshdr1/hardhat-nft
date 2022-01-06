@@ -1,12 +1,12 @@
 const {expect}=require('chai');
 
 describe('NFTToken',()=>{
-    let admin,artist,owner1,owner2;
+    let _admin,artist,owner1,owner2;
     const txFee=ethers.utils.parseUnits('1','ether')
     let token,nftToken;
 
     beforeEach(async()=>{
-        [admin,artist,owner1,owner2]=await ethers.getSigners()
+        [_admin,artist,owner1,owner2]=await ethers.getSigners()
         const Token=await ethers.getContractFactory('MockToken')
 
         token=await Token.deploy()
